@@ -16,7 +16,6 @@ export default async function Page({ params }) {
   const { id, name, maxCapacity, regularPrice, discount, image, description } =
     cabin;
 
-  if (!cabin) return <NotFound />;
   // In a real app, you would fetch the cabin by its ID
   // const cabin = await getCabinById(params.cabinId);
   // If no cabin found, you would handle it (e.g. show 404 page)
