@@ -1,5 +1,3 @@
-// import { unstable_noStore as noStore } from "next/cache";
-
 import CabinCard from "./CabinCard";
 import { getCabins } from "@/lib/data-service";
 
