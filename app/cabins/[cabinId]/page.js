@@ -20,8 +20,6 @@ export async function generateStaticParams() {
 export default async function Page({ params }) {
   const cabin = await getCabin(params.cabinId);
 
-  const { name } = cabin;
-
   // In a real app, you would fetch the cabin by its ID
   // const cabin = await getCabinById(params.cabinId);
   // If no cabin found, you would handle it (e.g. show 404 page)
@@ -33,7 +31,7 @@ export default async function Page({ params }) {
 
       <div>
         <h2 className="text-5xl font-semibold text-center mb-10 text-accent-400">
-          Reserve {name} today. Pay on arrival.
+          Reserve {cabin.name} today. Pay on arrival.
         </h2>
 
         <Suspense fallback={<Spinner />}>
